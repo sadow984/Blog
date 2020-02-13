@@ -1,15 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import Header from "./Header/Header";
-import './App.css';
+import "./App.css";
 
-class App extends Component{
+class App extends Component {
   render() {
-    
-
-
-    return (
-      <Header></Header>
-    );
+    return <Header />;
   }
 }
 
