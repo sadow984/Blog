@@ -21,34 +21,34 @@ const Header = () => {
         </div>
       </div>
       <section className={classes.section}>
-        <div>
+        <div className={classes.Bar}>
           <IconButton
-            title='Search Blog'
+            title="Search Blog"
             onClick={changeSearchState}
-            disableRipple='true'
-            disableFocusRipple='true'
-            size='small'
+            disableRipple="true"
+            disableFocusRipple="true"
+            size="small"
           >
             <Search className={classes.IconClass} />
           </IconButton>
-          <span
-            style={{ display: `${searchVisible ? 'inline-block' : 'none'}` }}
+          <div
+            style={{ display: `${searchVisible ? "inline-block" : "none"}` }}
           >
             <Input
               ref={inputRef}
               autoFocus={true}
               disableUnderline={true}
-              placeholder='Search Blog'
+              placeholder="Search Blog"
             />
-          </span>
+          </div>
         </div>
       </section>
-      <div style={{ marginRight: '1rem' }}>
+      <div style={{ marginRight: "1rem" }}>
         <Button
-          disableRipple='true'
-          variant='contained'
-          color='primary'
-          size='medium'
+          disableRipple="true"
+          variant="contained"
+          color="primary"
+          size="medium"
         >
           LOGIN
         </Button>
