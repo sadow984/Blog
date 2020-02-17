@@ -32,9 +32,9 @@
   align-items: center;
   transition: all 0.3s ease-in;
 }
-@media screen and (max-width: 768px) {
-  .section {
-    flex: 1;
+@media screen and (max-width: 549px) {
+  .Bar {
+    width:300px;
   }
 }
 .IconClass {
