@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "../Card";
-import myCard from "./flutterReact.png";
+import demoImage from "./flutterReact.png";
 
 const Cards = () => {
  
@@ -18,12 +18,12 @@ const Cards = () => {
   let cards = [
     {
       CardImage:
-        myCard,
+        demoImage,
       Date: date,
       Title: "What Flutter is ?"
     },
     {
-      CardImage: myCard,
+      CardImage: demoImage,
       Date: date,
       Title: "How Flutter Works ?"
     }

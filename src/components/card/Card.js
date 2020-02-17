@@ -1,24 +1,14 @@
 import React from 'react';
-// import myCard from './flutterReact.png';
-import classes from './Card.css';
+import classes from './Card.module.css';
 
 const Card =props => {
-    // let style = {
-    //     backgroundImage: 'url(' + myCard + ')',
-    //     width:'10%'
-    // };
-
-
     return (
-      // Give border to whole card
-        
-      <div className={classes.Card}>
-        <div  className={classes.CardHeader}>
-          <img src={props.image} alt="hello"/>
-        </div>
-        <div className="CardBody">
-          <p className="Date">{props.date}</p>
+      <div className={classes.CardContainer}>
+        <img src={props.image} className={classes.ImageContainer}>
+        </img>
+        <div className={classes.CardBody}>
           <h2>{props.title}</h2>
+          <p>{props.date}</p>
         </div>
       </div>
     );
