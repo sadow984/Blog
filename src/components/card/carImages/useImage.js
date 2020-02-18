@@ -1,1 +1,0 @@
-import myCard from ''

@@ -3,22 +3,27 @@ import Card from "../Card";
 import myCard from "./flutterReact.png";
 
 const Cards = () => {
+ 
+  let month= ["January","February","March","April","May","June","July",
+              "August","September","October","November","December"];
+
   let tempDate = new Date();
+  const Month= month[tempDate.getMonth()];
   let date =
-    tempDate.getFullYear() +
-    "-" +
-    (tempDate.getMonth() + 1) +
-    "-" +
-    tempDate.getDate();
+    Month +
+    " " +
+    tempDate.getDate() +
+    " " +
+    tempDate.getFullYear();
   let cards = [
     {
       CardImage:
-        "myCard",
+        myCard,
       Date: date,
       Title: "What Flutter is ?"
     },
     {
-      CardImage: "myCard",
+      CardImage: myCard,
       Date: date,
       Title: "How Flutter Works ?"
     }
