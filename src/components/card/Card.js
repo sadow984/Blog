@@ -7,6 +7,7 @@ const Card =props => {
         <img src={props.image} className={classes.ImageContainer}>
         </img>
         <div className={classes.CardBody}>
+          {/* <div className={classes.Author}></div> */}
           <h2>{props.title}</h2>
           <p>{props.date}</p>
         </div>
