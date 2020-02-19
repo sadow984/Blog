@@ -28,6 +28,7 @@ const Header = () => {
             disableRipple="true"
             disableFocusRipple="true"
             size="small"
+            onBlur={changeSearchState}
           >
             <Search className={classes.IconClass} />
           </IconButton>
