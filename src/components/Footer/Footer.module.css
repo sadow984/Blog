@@ -1,6 +1,10 @@
-.Footer{
+.footer{
     width: 100%;
-    height: 80px;
+    height: 100px;
     background-color:lightgray;
     display: flex;
+    justify-content: space-around;
+}
+.logo{
+    flex:1;
 }

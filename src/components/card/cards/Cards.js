@@ -1,40 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "../Card";
 import demoImage from "./flutterReact.png";
 
 const Cards = () => {
+
+  const [count, setCount] = useState(0);
  
   let month= ["January","February","March","April","May","June","July",
               "August","September","October","November","December"];
 
   let tempDate = new Date();
   const Month= month[tempDate.getMonth()];
-  let date =
-    Month +
-    " " +
-    tempDate.getDate() +
-    " " +
-    tempDate.getFullYear();
+  let date = Month + " " + tempDate.getDate() + " " + tempDate.getFullYear();
+   
   let cards = [
-    {
-      CardImage:
-        demoImage,
-      Date: date,
-      Title: "What Flutter is ?"
-    },
-    {
-      CardImage: demoImage,
-      Date: date,
-      Title: "How Flutter Works ?"
-    }
-  ];
+    {cardImage: demoImage,date: date,title: "What Flutter is ?",clap: count},
+    {cardImage: demoImage,date: date,title: "How Flutter Works ?",clap: count}];
 
-  return cards.map(cur => {
+  const increaseClapHandler = cardindex => {
+    const newCards = [...cards]
+    setCount(newCards[cardindex].clap + 1)
+  }
+
+  return cards.map((cur, index) => {
     return (
       <Card
-        image={cur.CardImage}
-        date={cur.Date}
-        title={cur.Title}
+        image={cur.cardImage}
+        date={cur.date}
+        title={cur.title}
+        clap={() => increaseClapHandler(index)}
+        count={cur.clap}
       />
     );
   });
