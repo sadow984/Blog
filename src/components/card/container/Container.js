@@ -7,13 +7,11 @@ const Container = () => {
     return (
       <div>
         <span>Recent</span>
-        <div>
           <Cards />
-        </div>
+          <Cards />
         <span>Popular</span>
-        <div>
           <Cards />
-        </div>
+          <Cards />
       </div>
     );
 }

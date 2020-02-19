@@ -30,11 +30,21 @@
   justify-content: flex-end;
   margin-right: 1rem;
   align-items: center;
-  transition: all 0.3s ease-in;
+  animation: slide 2s 0.1s linear;
 }
+
+@keyframes slide {
+  from {
+    width: 0px; 
+  }
+  to {
+    width: 100px;
+  }
+}
+
 @media screen and (max-width: 549px) {
   .Bar {
-    width:300px;
+    width: 300px;
   }
 }
 .IconClass {
