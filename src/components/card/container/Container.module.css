@@ -1,3 +1,11 @@
+.ContainerWrapper{
+  width: 100%;
+}
+
+.CategoryName{
+  margin-left: 10px;
+}
+
 .Recent,
 .Popular {
   display: flex;
