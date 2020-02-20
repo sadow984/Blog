@@ -1,0 +1,10 @@
+.Recent,
+.Popular {
+  display: flex;
+  overflow-x: auto;
+}
+
+.Recent::-webkit-scrollbar,
+.Popular::-webkit-scrollbar {
+  display: none;
+}

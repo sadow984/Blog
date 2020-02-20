@@ -1,3 +1,9 @@
+.FooterWrapper{
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
 .MainFooter * {
   box-sizing: border-box;
 }
