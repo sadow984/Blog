@@ -23,7 +23,7 @@ const Card = props => {
           {props.counts}
         </IconButton>
       </div>
-    </div>
+      </div>
   );
 };
 

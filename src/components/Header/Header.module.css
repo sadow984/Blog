@@ -30,12 +30,15 @@
   justify-content: flex-end;
   margin-right: 1rem;
   align-items: center;
-  animation: slide 2s 0.1s linear;
+}
+
+.SearchBox {
+  animation: slide 0.24s linear;
 }
 
 @keyframes slide {
   from {
-    width: 0px; 
+    width: 0px;
   }
   to {
     width: 100px;

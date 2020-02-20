@@ -3,18 +3,32 @@ import classes from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <div className={classes.footer}>
-      <div className={classes.logo}>
-        <div className={classes.logoDiv}>
+    <footer className={classes.MainFooter}>
+      <div className={classes.Logo}>
+        <div className={classes.LogoDiv}>
           <span>BG</span>
         </div>
       </div>
-      <div className={classes.link}>
-        <a href="">Privacy</a>
-        <a href="">About</a>
-        <a href="">Help</a>
-      </div>
-    </div>
+      <nav>
+        <ul className={classes.MainFooterLinks}>
+          <li className={classes.MainFooterLink}>
+            <a href="#">Privacy</a>
+          </li>
+          <li className={classes.MainFooterLink}>
+            <a href="#">About</a>
+          </li>
+          <li className={classes.MainFooterLink}>
+            <a href="#">Help</a>
+          </li>
+          <li className={classes.MainFooterLink}>
+            <a href="#">Support</a>
+          </li>
+          <li className={classes.MainFooterLink}>
+            <a href="#">Terms of Use</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
   );
 };
 
