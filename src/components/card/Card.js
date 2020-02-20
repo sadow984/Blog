@@ -20,7 +20,7 @@ const Card = props => {
           edge="end"
         >
           <FavoriteIcon />
-          {props.count}
+          {props.counts}
         </IconButton>
       </div>
     </div>

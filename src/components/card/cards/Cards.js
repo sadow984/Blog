@@ -3,8 +3,6 @@ import Card from "../Card";
 import demoImage from "./flutterReact.png";
 
 const Cards = () => {
-
-  const [count, setCount] = useState(0);
  
   let month= ["January","February","March","April","May","June","July",
               "August","September","October","November","December"];
@@ -14,22 +12,31 @@ const Cards = () => {
   let date = Month + " " + tempDate.getDate() + " " + tempDate.getFullYear();
    
   let cards = [
-    {cardImage: demoImage,date: date,title: "What Flutter is ?",clap: count},
-    {cardImage: demoImage,date: date,title: "How Flutter Works ?",clap: count}];
+    {cardImage: demoImage,date: date,title: "What Flutter is ?",clap: 0},
+    { cardImage: demoImage, date: date, title: "How Flutter Works ?", clap: 0 }];
+  
+  const [count, setCount] = useState(cards);
 
   const increaseClapHandler = cardindex => {
-    const newCards = [...cards]
-    setCount(newCards[cardindex].clap + 1)
+    
+    setCount(count.map((ini, index) => {
+      if (index === cardindex)
+        ini.clap += 1
+      return (
+        ini
+      )
+    })
+    );
   }
-
-  return cards.map((cur, index) => {
+    
+  return count.map((cur, index) => {
     return (
       <Card
         image={cur.cardImage}
         date={cur.date}
         title={cur.title}
         clap={() => increaseClapHandler(index)}
-        count={cur.clap}
+        counts={cur.clap}
       />
     );
   });
