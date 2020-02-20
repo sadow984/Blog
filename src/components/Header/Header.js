@@ -32,7 +32,7 @@ const Header = () => {
           >
             <Search className={classes.IconClass} />
           </IconButton>
-          <div
+          <div className={classes.SearchBox}
             style={{ display: `${searchVisible ? "inline-block" : "none"}` }}
           >
             <Input
