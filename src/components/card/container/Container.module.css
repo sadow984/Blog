@@ -1,0 +1,18 @@
+.ContainerWrapper{
+  width: 100%;
+}
+
+.CategoryName{
+  margin-left: 10px;
+}
+
+.Recent,
+.Popular {
+  display: flex;
+  overflow-x: auto;
+}
+
+.Recent::-webkit-scrollbar,
+.Popular::-webkit-scrollbar {
+  display: none;
+}
