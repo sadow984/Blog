@@ -6,12 +6,28 @@ import classes from './Header.module.css';
 
 const Header = () => {
   const [searchVisible, setSearchVisibleHandler] = useState(false);
-  const inputRef = useRef(null);
+  const inputRef = useRef();
+
 
   const changeSearchState = () => {
     setSearchVisibleHandler(!searchVisible);
-    inputRef.current.value = '';
+    // inputRef.current.focus();
   };
+  let autofocus = null;
+   if(searchVisible){
+            autofocus=(<div
+              className={classes.SearchBox}
+              style={{ display: "inline-block"}}
+            >
+              <Input
+                // ref={inputRef}
+                autoFocus={true}
+                disableUnderline={true}
+                placeholder="Search Blog"
+                onBlur={changeSearchState}
+              />
+            </div >)
+   }
 
   return (
     <header className={classes.Header}>
@@ -28,20 +44,10 @@ const Header = () => {
             disableRipple="true"
             disableFocusRipple="true"
             size="small"
-            onBlur={changeSearchState}
           >
             <Search className={classes.IconClass} />
           </IconButton>
-          <div className={classes.SearchBox}
-            style={{ display: `${searchVisible ? "inline-block" : "none"}` }}
-          >
-            <Input
-              ref={inputRef}
-              autoFocus={true}
-              disableUnderline={true}
-              placeholder="Search Blog"
-            />
-          </div>
+         {autofocus}
         </div>
       </section>
       <div style={{ marginRight: "1rem" }}>
