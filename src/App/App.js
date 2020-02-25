@@ -9,6 +9,7 @@ const App = () => (
       <Router />
     </div>
   </BrowserRouter>
+
 );
 
 export default App;
