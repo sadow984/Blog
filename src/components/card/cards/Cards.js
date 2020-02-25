@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Card from "../Card";
 import demoImage from "./flutterReact.png";
-import BlogPage from "../BlogPage";
+import BlogPage from "../../BlogPage/BlogPage";
 import cards from "../data/CardData";
 
 const Cards = () => {

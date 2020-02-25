@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import Home from "../../components/Home";
-import BlogPage from "../../components/card/BlogPage";
+import BlogPage from "../../components/BlogPage/BlogPage";
 
 const Router = () => {
   return (
