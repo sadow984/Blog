@@ -53,3 +53,24 @@
 .IconClass {
   font-weight: 100;
 }
+/* 
+input[type="checkbox"]{
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+input[type="checkbox"]:before{
+  content: 'Dark';
+  background:#000;
+  color: #fff;
+}
+input[type="checkbox"]:checked:before{
+  content: 'Light';
+  color:#000;
+  background: #fff;
+}
+
+input[type="checkbox"]:checked ~ *{
+  filter: invert(1);
+  background: #fff;
+  
+} */

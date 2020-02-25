@@ -1,16 +1,14 @@
 import React from "react";
-
-import './App.css';
-import Header from '../components/Header/Header';
-import Container from '../components/card/container/Container';
-import Footer from '../components/Footer/Footer'
+import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+import Router from "./Routers/Router";
 
 const App = () => (
-  <div className="App">
-    <Header />
-    <Container />
-    <Footer />
-  </div>
+  <BrowserRouter>
+    <div className="App">
+      <Router />
+    </div>
+  </BrowserRouter>
 );
 
 export default App;
