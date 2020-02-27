@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import Card from "../Card";
-import demoImage from "./flutterReact.png";
-import BlogPage from "../../BlogPage/BlogPage";
 import cards from "../data/CardData";
 
 const Cards = () => {
@@ -24,7 +22,6 @@ const Cards = () => {
   };
 
   return count.map((cur, index) => {
-    console.log("hello");
     return (
       <div>
         <Card

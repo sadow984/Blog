@@ -1,0 +1,20 @@
+.title{
+    color: rgba(0, 0, 0, 0.637);
+    animation: slide 1.5s ease;
+    /* display: flex;
+    align-items: center; */
+    padding-left: 340px;
+
+}
+
+@keyframes slide {
+    from{
+        padding-left: 0px;
+        
+    }
+    to{
+        
+        padding-left: 340px;
+    }
+}
+

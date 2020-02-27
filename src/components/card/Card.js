@@ -8,7 +8,10 @@ const Card = props => {
   return (
     <div className={classes.CardContainer}>
       <Link
-        to={{pathname: "/blog", title: props.title, date:props.date, data:props.data}}>
+        to={{
+          pathname: "/blog", title: props.title, date: props.date,
+          data: props.data, count: props.counts, clap: props.clap
+        }}>
         <img
           src={props.image}
           className={classes.ImageContainer}
