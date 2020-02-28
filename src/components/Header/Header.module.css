@@ -32,16 +32,31 @@
   align-items: center;
 }
 
-.SearchBox {
-  animation: slide 0.24s linear;
+.openSearch {
+  animation: slide-open 0.24s forwards;
 }
-
-@keyframes slide {
+.closeSearch {
+  animation: slide-close 0.24s forwards;
+}
+@keyframes slide-open {
   from {
+    opacity: 0;
     width: 0px;
   }
   to {
-    width: 100px;
+    width: 150px;
+  }
+}
+@keyframes slide-close {
+  from {
+    width: 150px;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    width: 0;
+    opacity: 0;
   }
 }
 

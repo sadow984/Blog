@@ -1,33 +1,20 @@
-import React, { useState, useRef } from 'react';
-import { Button, IconButton, Input } from '@material-ui/core';
-import { Search } from '@material-ui/icons';
+import React, { useState, useRef } from "react";
+import { Button, IconButton, Input } from "@material-ui/core";
+import { Search } from "@material-ui/icons";
 
-import classes from './Header.module.css';
+import classes from "./Header.module.css";
 
 const Header = () => {
   const [searchVisible, setSearchVisibleHandler] = useState(false);
-  const inputRef = useRef();
-
+  const mdInputRef = useRef(null);
 
   const changeSearchState = () => {
+    if (!searchVisible) {
+      mdInputRef.current.focus();
+      mdInputRef.current.value = "";
+    }
     setSearchVisibleHandler(!searchVisible);
-    // inputRef.current.focus();
   };
-  let autofocus = null;
-   if(searchVisible){
-            autofocus=(<div
-              className={classes.SearchBox}
-              style={{ display: "inline-block"}}
-            >
-              <Input
-                // ref={inputRef}
-                autoFocus={true}
-                disableUnderline={true}
-                placeholder="Search Blog"
-                onBlur={changeSearchState}
-              />
-            </div >)
-   }
 
   return (
     <header className={classes.Header}>
@@ -41,18 +28,24 @@ const Header = () => {
           <IconButton
             title="Search Blog"
             onClick={changeSearchState}
-            disableRipple="true"
-            disableFocusRipple="true"
+            disableRipple={true}
+            disableFocusRipple={true}
             size="small"
           >
             <Search className={classes.IconClass} />
           </IconButton>
-         {autofocus}
+          <Input
+            inputRef={mdInputRef}
+            onBlur={changeSearchState}
+            placeholder="Search Blog"
+            disableUnderline={true}
+            className={searchVisible ? classes.openSearch : classes.closeSearch}
+          />
         </div>
       </section>
       <div style={{ marginRight: "1rem" }}>
         <Button
-          disableRipple="true"
+          disableRipple={true}
           variant="contained"
           color="primary"
           size="medium"
