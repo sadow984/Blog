@@ -1,45 +1,65 @@
-.FooterWrapper{
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
 .MainFooter * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.MainFooter {
+  left: 0;
+  bottom: 0;
+}
+.LogoWrapper {
+  display: none;
 }
 
 .MainFooter {
   width: 100%;
-  min-width: 50%;
-  height: 80px;
   background-color: royalblue;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.Logo {
-  margin-left: 15px;
-}
-
-.LogoDiv {
-  background-color: black;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
+  justify-content: center;
 }
 
 .MainFooterLinks {
   list-style: none;
   display: flex;
+  flex-direction: column;
 }
 
+
 .MainFooterLink {
-  margin: 0 16px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 8px;
 }
 
 .MainFooterLink a {
   color: white;
   text-decoration: none;
+}
+
+@media (min-width: 40rem) {
+  .MainFooter {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .LogoWrapper{
+    display: flex;
+    padding: 0.8rem;
+    align-items: center;
+    margin-left: 1rem;
+    background-color: black;
+    border-radius: 0.6rem;
+    cursor: pointer;
+  }
+
+  .LogoWrapper span{
+    color: white;
+    font-size: bold;
+  }
+
+  .MainFooterLinks {
+    flex-direction: row;
+    margin: 1rem;
+  }
 }
