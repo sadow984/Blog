@@ -4,52 +4,6 @@
   padding: 0;
 }
 
-/*.CardContainer {
-  display: flex;
-  border-radius: 10px;
-  margin: 20px;
-  max-width: 70%;
-  min-width: 30%;
-  height: auto;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 2px 2px 2px 2px rgba(0, 17, 255, 0.6);
-}
-
-.ImageContainer{
-  display: flex;
-  width: 100%;
-}
-
-.CardBody {
-  display: flex;
-  justify-content: space-between;
-  position: absolute;
-  left: 0;
-  bottom: -100%;
-  width: 100%;
-  height: auto;
-  padding: 8px;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.6);
-  transition: all 0.4s ease-in-out 0s;
-}
-.CardBody h2{
-  font-size: 1.2rem;
-}
-
-.CardContainer:hover .CardBody {
-  bottom: 0;
-}
-
-.CardBody .Author {
-  vertical-align: middle;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: rebeccapurple;
-} */
-
 
 .CardContainer {
   height: auto;
@@ -121,7 +75,6 @@
 }
 
 .CardCategory {
-  font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   font-size: 11px;
   overflow: hidden;
@@ -131,13 +84,11 @@
 
 .CardTitle {
   margin-top: 5px;
-  font-family: "Roboto Slab", serif;
   white-space: nowrap;
 }
 
 .CardBy {
   font-size: 12px;
-  font-family: "Raleway", sans-serif;
   font-weight: 500;
 }
 
