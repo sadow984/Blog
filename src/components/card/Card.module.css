@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-.CardContainer {
+/*.CardContainer {
   display: flex;
   border-radius: 10px;
   margin: 20px;
@@ -48,4 +48,110 @@
   height: 50px;
   border-radius: 50%;
   background-color: rebeccapurple;
+} */
+
+
+.CardContainer {
+  height: auto;
+  width: 100%;
+  margin: 20px;
+}
+
+.Link{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.CardBody {
+  background-color: #fff;
+  /* margin: 20px; */
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  align-items: flex-start;
+  border-radius: 16px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 17, 255, 0.6);
+}
+
+.CardImage {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 70%;
+  transition: height ease-in-out 500ms;
+  -webkit-transition: height ease-in-out 500ms ;
+
+}
+
+.CardInfo {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+  transition: height ease-in-out 500ms;
+  -webkit-transition: height ease-in-out 500ms ;
+}
+
+.LikeButton{
+  display: flex;
+  align-items: center;
+  width: 15%;
+  overflow: hidden;
+}
+
+/* .CardBody:hover{
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+} */
+
+.CardInfoDetails{
+  padding: 8px;
+}
+
+.CardBody:hover .CardImage {
+  height: 100%;
+}
+
+.CardBody:hover .CardInfo{
+  height: 0;
+}
+
+.CardCategory {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 11px;
+  overflow: hidden;
+  letter-spacing: 2px;
+  color: #868686;
+}
+
+.CardTitle {
+  margin-top: 5px;
+  font-family: "Roboto Slab", serif;
+  white-space: nowrap;
+}
+
+.CardBy {
+  font-size: 12px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+
+.CardAuthor {
+  font-weight: 600;
+  text-decoration: none;
+  color: #ad7d52;
+}
+
+@media (max-width: 64rem) {
+  .CardContainer {
+    max-width: 60%;
+    min-width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

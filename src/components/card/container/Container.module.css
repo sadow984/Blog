@@ -1,18 +1,26 @@
-.ContainerWrapper{
-  width: 100%;
+.ContainerWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  width: 80%;
 }
 
-.CategoryName{
-  margin-left: 10px;
+.CategoryName {
+  font-weight: bold;
+  font-size: larger;
 }
 
 .Recent,
 .Popular {
   display: flex;
-  overflow-x: auto;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
-.Recent::-webkit-scrollbar,
-.Popular::-webkit-scrollbar {
-  display: none;
+@media (min-width: 64rem) {
+  .Recent,
+  .Popular {
+    flex-direction: row;
+  }
 }
